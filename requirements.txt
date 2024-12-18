@@ -1,0 +1,7 @@
+boto3==1.26.2
+Flask==2.2.5
+waitress==2.1.2
+Flask-Migrate==4.0.4
+Flask-SQLAlchemy==3.0.4
+requests==2.26.0
+psycopg2-binary==2.9.6

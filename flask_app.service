@@ -1,0 +1,16 @@
+[Unit]
+Description=Flask App WebServer
+After=network.target
+
+[Service]
+EnvironmentFile=/home/webserver/environment_file
+Type=simple
+User=webserver
+WorkingDirectory=/home/webserver/flask_app
+ExecStart=/home/webserver/flask_app/venv/bin/waitress-serve --listen=0.0.0.0 app:app
+Restart=always
+RestartSec=5
+StartLimitInterval=0
+
+[Install]
+WantedBy=multi-user.target
